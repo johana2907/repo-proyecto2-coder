@@ -1,0 +1,8 @@
+/* Flexbox ejemplo */
+.padre {
+  display: flex;
+}
+
+.hijo {
+  background-color: red;
+}
