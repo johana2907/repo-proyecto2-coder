@@ -111,6 +111,11 @@ p {
   margin-right: 50px;
 }
 
+.img-redes-grid{
+  max-width: 20px; /* Ajusta el tamaño según necesites */
+    height: auto; /* Mantiene la proporción */
+}
+
 .acerca-de-mi-titulo{
   margin-bottom: 15px;
   align-items: center;
