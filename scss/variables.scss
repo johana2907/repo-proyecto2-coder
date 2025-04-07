@@ -1,0 +1,27 @@
+// VARIABLES //
+$primary-color: black;
+$primary-bg: url('../img/medio-cuerpo.jpeg');
+$font-stack: "Lilita One", sans-serif;
+$font-color-titles: rgb(255, 255, 255);
+$font-size-h-header: 30px;
+$secundary-color: #f8d200;
+$color-p: rgb(148, 148, 148);
+$shadow-color: rgba(0,0,0,0.1);
+$background-li: #f8f9fa;
+$background-li-hover: #e2e6ea;
+$main-background-color: #131313;
+$container-color: white;
+$carousel-control-color: rgb(211, 198, 198);
+$background-color-target:  #f4f7f9;
+
+// MIXIN //
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin titles {
+    font-family: $font-stack;
+    color: $font-color-titles;
+    text-align: center;
+}

@@ -1,0 +1,313 @@
+@import 'scss/variables.scss';
+
+h1 {
+    @include titles;
+    font-size: 30px;
+  }
+  
+  h2 {
+    @include titles;
+    font-size: 25px;
+  }
+  
+  h3 {
+    @include titles;
+    font-size: 20px;
+  }
+  
+  h4 {
+    @include titles;
+    font-size: 15px;
+}
+
+
+/*anidamiento*/
+
+.navegacion {
+    @include flex-center;
+    list-style-type: none; /* Elimina los puntos de la lista */
+    gap: 15px;
+    padding: 20px 0;            /* Elimina el padding de la lista */
+    margin: 0;             /* Elimina el margen de la lista */
+
+    li a {
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        box-shadow: 0 4px 6px $shadow-color;
+        background-color: $secundary-color; /* Color del botón */
+        color: $primary-color;
+    }
+}
+
+main {
+    background-image: $primary-bg;
+    background-size: auto;  /* Hace que la imagen cubra toda la pantalla */
+    background-position: center;  /* Centra la imagen de fondo */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la ventana del navegador */
+    margin: 0; /* Elimina los márgenes predeterminados del body */
+    background-color: $main-background-color /* Pone color de fondo a la parte blanca del contenedor */
+}
+
+p {
+    font-family: $font-stack; 
+    color: $color-p;  /* Cambia el color de todos los párrafos */
+}
+
+#logo {
+    width: 150px; /* Cambia el tamaño del logo */
+    height: auto; /* proporción de la imagen */
+    display: block; /* el logo se muestre como bloque */
+    margin:  18px; /* Centra el logo */
+    border-radius: 10mm;
+}
+
+.home {
+    text-align: center;
+
+    .mi-eslogan {
+        font-size: 50px;
+        font-family: $font-stack;
+        text-align: center;
+        padding-top: 50px;
+    }
+}
+
+.footer {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .redes {
+        justify-content: space-between;
+        width: calc(90% / 4 - 10px);
+        display: flex;
+        margin-right: 50px;
+    }
+}
+
+.aboutme {
+    .acerca-de-mi{
+        flex: 1;
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        margin: 30px; 
+        padding-top: 50px;
+        font-size: 17px;
+    }
+    
+    .values-titulo{
+        margin-bottom: 15px;
+        align-items: center;
+        height: 70px;
+        padding-top: 100px;
+        font-size: 40px;
+    }
+    
+    .container-values {
+        @include flex-center;
+        align-items: center;
+        height: 50vh;
+        gap: 20px;
+        margin: 15px;
+    
+        .value {
+            flex: 1;
+            text-align: center;
+            box-shadow: 2px 2px 5px $shadow-color;
+        }
+    }
+}
+
+.container{
+    text-align: center;
+    padding: 30px;
+    background:transparent;
+    color: $container-color;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+
+    .carousel-inner {
+        display: flex;
+        align-items: center;
+        height: 620px ;
+
+        .carousel-item {
+            width: 100%;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .carousel-control-prev-icon {
+        background-color: $carousel-control-color;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    .carousel-control-next-icon {
+        @extend .carousel-control-prev-icon;
+    }
+}
+.cuadricula{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 100px);
+    gap: 20px;
+    padding-top: 10px;
+    margin-inline-start: 100px;
+    margin-inline-end: 100px;
+    grid-template-areas:
+     "caja1 caja2"
+     "caja3 caja4"
+     "caja5 caja5" 
+     "caja6 caja7"
+     "caja8 caja9";
+
+    .caja1 {
+        grid-area: caja1;
+    }
+    .caja2 {
+        grid-area: caja2;
+    }
+    .caja3 {
+        grid-area: caja3;
+    }
+    .caja4 {
+        grid-area: caja4;
+    }
+    .caja5 {
+        grid-area: caja5;
+    }
+    .caja6 {
+        grid-area: caja6;
+    }
+    .caja7 {
+        grid-area: caja7;
+    }
+    .caja8 {
+        grid-area: caja8;
+    }
+    .caja9 {
+        grid-area: caja9;
+    }
+
+    .caja {
+        background-color: transparent;
+        align-items: center;
+        @include flex-center;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #e0c00f;
+        padding-top: 10px;
+       
+        .grupales {
+            font-size: 18px;
+            font-weight: 400px;
+            width: 500px;
+            grid-column: 2 / 3;
+            justify-self: center;
+        } 
+        
+        .img-training {
+            width: 90px;
+            height: 90px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid #ddd;
+        } 
+    
+        .img-grupal {
+            width: 80px;
+            height: 80px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid #ddd;
+        }
+    }
+
+} 
+
+.body-tarjetas {  
+    background: $background-color-target;
+    color: hsl(0, 17%, 94%);
+    margin: 0;
+    padding: 0;
+
+    .container-tarjetas {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px $shadow-color;
+            background: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+            &:hover{
+              transform: translateY(-5px);
+              box-shadow: 0px 8px 20px $shadow-color;
+                
+            }
+    
+            .form-control {
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                padding: 12px;
+                transition: 0.3s;
+    
+                &:focus{
+                    border-color: #007bff;
+                    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5); 
+                }
+            }
+    
+            .btn-primary:hover {
+                transform: scale(1.05);
+            }
+    
+        }    
+
+        .list-unstyled {
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                background: $background-li;
+                padding: 12px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                transition: 0.3s;
+        
+                &:hover {
+                    @extend li;
+                    background: $background-li-hover;
+                    transform: scale(1.02);
+                }
+        
+                img {
+                    margin-right: 10px;
+                    transition: 0.3s;
+        
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                } 
+            }
+        }
+    }
+}
+
