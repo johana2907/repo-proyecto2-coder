@@ -39,8 +39,9 @@ h1 {
         text-transform: uppercase;
         transition: all 0.3s;
         box-shadow: 0 4px 6px $shadow-color;
-        background-color: $secundary-color; /* Color del botón */
+        background-color: $secundary-color;/* Color del botón */
         color: $primary-color;
+      
     }
 }
 
